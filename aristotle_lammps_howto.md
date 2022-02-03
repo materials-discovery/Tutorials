@@ -138,7 +138,7 @@ this will take a while, once the entire repository is cloned, you can browse it 
 do the following
 * `cd ` + Enter, to got the home folder
 * `cd lammps_tutorial_1`
-* `cp -r ~/lammps-29Sep2021/examples/melt/ .' --> this will copy the entire melt folder from the lammps examples to your lammps_tutorial_1 folder
+* `cp -r ~/lammps/examples/melt/ .` --> this will copy the entire melt folder from the lammps examples to your lammps_tutorial_1 folder
 * `cd melt`
 * ~/Lammps_tutorials/lmp_aristotle -i in.melt`
 
