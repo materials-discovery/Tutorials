@@ -152,7 +152,7 @@ One option is to use [scp or winscp]((https://www.rc.ucl.ac.uk/docs/howto/#windo
 First we activate nano (we need to do this every time we log in to Aristotle):
 
 * `modeule load nano`
-
+*`module load nano`
 now run 
 
 * `nano in.melt`  and use the arrow keys to move arround. Identify all the various parts of the input file, and consult the lammps manual for help! 
