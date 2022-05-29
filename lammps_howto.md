@@ -1,83 +1,55 @@
 # LAMMPS on Aristotle@UCL
 
-## Introduction 
-This is a tutorial for setting up and running Lammps on Aristotle at UCL. 
+# Introduction 
+This is a tutorial/howto for setting up and running LAMMPS [https://www.lammps.org](https://www.lammps.org) on Aristotle at UCL. 
+
+## Disclaimer 
+It is not intended to be a full tutorial for LAMMPS it self, but rather an initial document enabling new students to find their path in the information stream, and also allow more experienced users a place to store links and share tips about LAMMPS, specifically designed and targeting the Student Master Projects.
+
+All Logos and external content is copyrighted with respective owners, all links, are provided for information purposes only as is, if you spot something wrong or inappropriate please contact A.H.
 
 ## What is LAMMPS
-![Drag Racing](lammps-logo.png)
+* LAMMPS official website:  [https://www.lammps.org](https://www.lammps.org). 
+
+![https://www.lammps.org](./figures/lammps_logo.png)
 
 LAMMPS stands for Large-scale Atomic/Molecular Massively Parallel Simulator.
 
-LAMMPS is a classical molecular dynamics simulation code with a focus on materials modeling. It was designed to run efficiently on parallel computers. It was developed originally at Sandia National Laboratories, a US Department of Energy facility. The majority of funding for LAMMPS has come from the US Department of Energy (DOE). LAMMPS is an open-source code, distributed freely under the terms of the GNU Public License Version 2 (GPLv2).
+> _LAMMPS is a classical molecular dynamics simulation code with a focus on materials modeling. It was designed to run efficiently on parallel computers. It was developed originally at Sandia National Laboratories, a US Department of Energy facility. The majority of funding for LAMMPS has come from the US Department of Energy (DOE). LAMMPS is an open-source code, distributed freely under the terms of the GNU Public License Version 2 (GPLv2)._ 
 
 ## Where can I find more information about LAMMPS
 The best source of information is the [LAMMPS home page](https://www.lammps.org) and the [LAMMPS manual](https://docs.lammps.org/Manual.html). LAMMPS is also found on the official [github repository](https://github.com/lammps/lammps).
 
-## What is Aristotle
-Aristotle is an interactive, Linux-based compute service for teaching, running on three each node 64 gigabytes of RAM and 16 cores. 
-The nodes run the Red Hat Enterprise Linux operating system (RHEL 7)
-see [ISD](
- https://www.rc.ucl.ac.uk/docs/Other_Services/Aristotle/) for more information.
+## Prerequisite 
+in order to follow the tutorials and howto's here you should first read the `aristotle_howto.md` in this repo and get aquatinted with using the terminal and linux shell. 
 
-## How to connect to Aristotle 
-See the official documentation on [UCL-IDS website](https://www.rc.ucl.ac.uk/docs/howto/)
+# Setting up Lammps on Aristotle 
 
-**NOTE**: if you are not connected to the EDUROAM wifi network while st UCL, then you need to use [VPN](https://www.ucl.ac.uk/isd/services/get-connected/ucl-virtual-private-network-vpn) first before connecting to ARISTOTLE (alternatively you van use a gateway but is outside the scope of this how-to)
+Please run the following commands in the terminal (copy and paste after the
 
-## You need to use a Terminal for this tutorial!
-For this tutorial you need a Terminal program runnig an appropriate shell on your laptop/desktop and connect to a shell (a remote terminal) in Aristotle. ![](Linux_command-line._Bash._GNOME_Terminal._screenshot.png).
+`-bash-4.2$ ` 
 
-This is also needed if you are using [UCL Desktop@Anywhere](https://www.ucl.ac.uk/isd/services/computers/remote-access/desktopucl-anywhere)
+if using Aristotle). 
 
-On **windows** 10/11 you can either 
-
-1. use [putty](https://www.rc.ucl.ac.uk/docs/howto/#windows-putty) or 
-2. open a windows "CMD" or Powershell (**prefered* as of the last class practical).
-
-To use CMD, go to the search area in the panel and type cmd or command, it should appear like so: 
-
-![](cmd-search2.png) 
-
-then click on Command Prompt to launch it, and type in it 
-
-`ssh <ucl_user_id>@aristotle.rc.ucl.ac.uk`
-
-(you can lso use powershell instead). 
+```bash
+module load default-modules
+module -f unload compilers mpi gcc-libs
+module load beta-modules
+module use --append /home/ccaabaa/lib/modulefiles/development /home/ccaabaa/lib/modulefiles/bundles /home/ccaabaa/lib/modulefiles/beta
+module load gcc-libs/10.2.0
+module load compilers/gnu/10.2.0
+module load numactl/2.0.12
+module load binutils/2.36.1/gnu-10.2.0
+module load ucx/1.9.0/gnu-10.2.0
+module load mpi/openmpi/4.0.5/gnu-10.2.0
+module load python3/3.9-gnu-10.2.0-aristotle
 
 
-For **Mac/Linux** open a Terminal application (use spotlight search to find it) then use ssh to connect to Aristotle as in windows CMD above, i.e., type:
+module load lammps/29sep21up2/basic/gnu-10.2.0-aristotle
+```
 
-`ssh <ucl_user_id>@aristotle.rc.ucl.ac.uk`
+* **Tip** cut and paste the above into the file .bashrc in your home folder on Aristotle, then you never need to redo this again (hint, use `nano`). A ready to use .bashrc is in the folder utils in this repo, move it to your home folder in Aristotle and then log out and then log in. 
 
-Then you will be asked for the password. **Note while you type the password on the terminal, you will not see anything being typed! this is to make sure now one sees your password! just type the password carefully and then hit Enter key**
-
-Now you should be logged in and get something similar to the following prompt: 
-
-![](cmd.png)
-
-For much more tharough information and help about the linux/Mac (in fact, more generally UNIX) Terminal see [A guide to the Linux terminal for beginners](https://opensource.com/article/21/8/linux-terminal) and a nice intro to the [main commands you need in a terminal](https://www.redhat.com/sysadmin/10-commands-terminal).
-
-## Setting up Lammps on Aristotle 
-**NOTE: Please do not yet try this as there is a bug on Aristotle and our Research Computing devision is taking care of it, in the mean time, please copy an executable from this repo. **
-
-Lammps is one of the supported and already available packages but it needs to be activated. Once you are logged in execute the following commands: 
-
- ~~`_> module load gcc-libs/4.9.2`~~
-
-
-~~`_> module load compilers/intel/2018/update3`~~
-
-~~`_> module load mpi/intel/2018/update3`~~
-
-~~`_> module load lammps/7Aug19/userintel/intel-2018`~~
-
-
-
-Note: run each command separately by copy and pasting the entire line and hitting enter afterwards. If there are issues, please submit an issue or email me directly. 
-
-Each of these commands will enable various parts of the environment needed to run Lammps (e.g., defining which compilers, libraries and executable to load into your path)
-
-Once these commands have run, you should have the executable `lmp_default` in your path and you are ready to move to the next section. 
 
 ### Temporary solution for getting LAMMPS on ARISTOTLE
 Until the module procedure is fixe, you should clone the lammps-tutorial repository from https://github.com/materials-discovery/Lammps_tutorials.git like so: 
