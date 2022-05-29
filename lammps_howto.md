@@ -20,10 +20,12 @@ LAMMPS stands for Large-scale Atomic/Molecular Massively Parallel Simulator.
 ## Where can I find more information about LAMMPS
 The best source of information is the [LAMMPS home page](https://www.lammps.org) and the [LAMMPS manual](https://docs.lammps.org/Manual.html). LAMMPS is also found on the official [github repository](https://github.com/lammps/lammps).
 
+Also see this tutorials page: [https://lammps.org/tutorials.html](https://lammps.org/tutorials.html)
+
 ## Prerequisite 
 in order to follow the tutorials and howto's here you should first read the `aristotle_howto.md` in this repo and get aquatinted with using the terminal and linux shell. 
 
-# Setting up Lammps on Aristotle 
+# Setting up LAMMPS on Aristotle 
 
 Please run the following commands in the terminal (copy and paste after the
 
@@ -48,92 +50,139 @@ module load python3/3.9-gnu-10.2.0-aristotle
 module load lammps/29sep21up2/basic/gnu-10.2.0-aristotle
 ```
 
-* **Tip** cut and paste the above into the file .bashrc in your home folder on Aristotle, then you never need to redo this again (hint, use `nano`). A ready to use .bashrc is in the folder utils in this repo, move it to your home folder in Aristotle and then log out and then log in. 
+* **Tip** 
+* 
+* cut and paste the above into the file .bashrc in your home folder on Aristotle, then you never need to redo this again (hint, use `nano`). alternatively, use the `.bashrc` and `.bash_profile' files in the folder `utils` in this repo, move them to your  home folder in Aristotle and then log out and then log in.  
 
+Now you should be able to type in the command line the following 
 
-### Temporary solution for getting LAMMPS on ARISTOTLE
-Until the module procedure is fixe, you should clone the lammps-tutorial repository from https://github.com/materials-discovery/Lammps_tutorials.git like so: 
+```shell
+(aristotle03 ~) > which lmp_aristotle 
+```
+If you see something like this, you are all set for simple lammps jobs:
 
-* Assuming you are already logged into Aristotle then type the following:
+```shell
+/home/ccaabaa/apps/lammps/29Sep2021_update2/basic-aristotle/gnu-10.2.0/bin/lmp_aristotle
+(aristotle03 ~) > 
+```
+# Run an example 
 
-```git clone https://github.com/materials-discovery/Lammps_tutorials.git```
+## Prepare a lammps work folder  
+It is a good practice to create a new folder for each project/tutorial. In this case we create on Aristotle (using the terminal) a new folder in the home folder. You may chose any folder name you want, here we choose "lammps_tut_1" : 
 
+type in the terminal prompt: 
 
-* this will clone this repository to your local folder names Lammps_tutorials. 
-
-* now enter into the lammps_tutorials folder: 
-
-```cd Lammps_tutorials```
-
-* there is a file called `lmp_aristotle.tgz`, which is a tar archive, lets extract it: 
-
-``` tar -xzvf lmp_aristotle.tgz```
-
-Now you will have an executable file called `lmp_aristotle` in the `Lammps_tutorials folder`. However, if you try to run it by writing the command 
-
-`lmp_aristotle' then pressing Enter, you get an error indicating some missing linraries, this is because you need still to load the compiler into your environment, so do the following: 
-
-`module load gcc-libs/4.9.2`
-
-then you can type the `lmp_aristotle` and it will work, it will show something like below: 
-
-![](lmp_check.png)
-
-### Prepare a folder for working on the tutorials 
-It is a good practice to create a new folder for each project/tutorial. In this case reate on Aristotle (using the terminal) a new folder in the home or main folder named "lammps_tutorial_1" like so: 
-
-type: 
-
-* `cd ` + Enter to return to the main folder of your account. 
-* `mkdir lammps_tutorial_1` + Enter to create 
-* `cd lammps_tutorial_1`  + Enter to enter this new folder. (from now on we will assume an Enter at the end of each command!)
+* `cd ` + press the Enter key to return to the main folder of your account (always `cd` without arguments gets you back to the home folder, its like the home button on a phone). 
+* `mkdir lammps_tut_1` + Enter to create this folder (use any name you want) 
+* `cd lammps_tut_1`  + Enter to enter this new folder. (from now on we will assume an Enter at the end of each command!)
 
 now if you list the contents of your home folder on Aristotle like so 
 
+* `ls ` 
+
+you will see no output, as this is a new folder ;-) 
 
 
-### Clone the LAMMPS GitHub Repository
-we want to use some LAMMPS examples, the easiest way to get them directly to your account in Aristotle is to clone the entire LAMMPS repository, this way not only the examples are available, but also the documentation and the source code. Of course you can later delete any folder you do not want using the `rm ` command. 
+
+## Get some LAMMPS examples
+we want to use some LAMMPS examples, the easiest way to get them directly to your account in Aristotle is to clone the entire LAMMPS repository, this way not only the examples are available, but also the documentation and the source code. Of course you can later delete any folder you do not want using the Unix `rm ` command. 
 
 We shall use some of the official LAMMPS tutorials. 
 
-Do in the terminal within the folder (press Enter at the end of each line to execute it)
+Inside a terminal (on Aristotle)  (don't forget to press Enter at the end of each line to execute it)
 
-* `cd ` + Enter, to got the home folder
+* `cd ` + Enter, to got the home folder, we will clone to the home folder, but you can of course clone to any other folder of your choice.  
 * `git clone  https://github.com/lammps/lammps.git` 
+  
+Now you should have a folder named `lammps` in your home folder. This is the entire lammps source code. 
 
-this will take a while, once the entire repository is cloned, you can browse it using `cd <folder>
-` and `cd ..` etc. 
+this will take a while, once the entire repository is cloned, you can browse it using `cd lammps
+` and `cd ..` etc.   
 
 ### Run the simple Melt Example: 
 
-do the following
+follwo these steps in the Terminal on Aristotle: 
+
 * `cd ` + Enter, to got the home folder
-* `cd lammps_tutorial_1`
-* `cp -r ~/lammps/examples/melt/ .` --> this will copy the entire melt folder from the lammps examples to your lammps_tutorial_1 folder
+* `cd lammps_tut_1`
+* `cp -r ~/lammps/examples/melt/ .` --> this will copy the entire `melt` example folder from the lammps examples to your lammps_tut_1 folder
 * `cd melt`
-* ~/Lammps_tutorials/lmp_aristotle -i in.melt`
+* `lmp_aristotle -i in.melt`  --> this will actually run lammps interactively, i.e, it will run in the foreground in teh terminal, the results will be printed directly to the screen. Here is how the first few lines look like: 
+
+```sh
+(aristotle03 melt) > lmp_aristotle -in in.melt > out.melt
+[aristotle03.kathleen.ucl.ac.uk:62204] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+(aristotle03 melt) > lmp_aristotle -in in.melt
+[aristotle03.kathleen.ucl.ac.uk:62221] mca_base_component_repository_open: unable to open mca_mtl_psm: libpsm_infinipath.so.1: cannot open shared object file: No such file or directory (ignored)
+LAMMPS (29 Sep 2021 - Update 2)
+Lattice spacing in x,y,z = 1.6795962 1.6795962 1.6795962
+Created orthogonal box = (0.0000000 0.0000000 0.0000000) to (16.795962 16.795962 16.795962)
+  1 by 1 by 1 MPI processor grid
+Created 4000 atoms
+  using lattice units in orthogonal box = (0.0000000 0.0000000 0.0000000) to (16.795962 16.795962 16.795962)
+  create_atoms CPU = 0.001 seconds
+Neighbor list info ...
+.....
+.....
+
+```
+**Note there is a warning related to mismatch of libraries, this is due to cross compilation for other machines, it can be ignored safely**
+
+* While it is fine to run short tasks interactively, later, for your projects, you would need to run much longer jobs and if the terminal is closed while the job is still running, or you turn off or put your machine to sleep the job (the lammps application) will stop and crash. Hence instead we now run in the background: 
+* run lammps in the background with output stored in lammps.out: 
+
+
+
+```sh 
+lmp_aristotle -in in.file > out.melt & 
+```
+
+the `>` is a redirection, it instructs the shell (the UNIX/Linux CLI programme) to redirect all output that normally is printed on the screen (i.e., terminal) to a file, in our case its called out.melt. The `&` means that the job is going to run in teh background, so that even when you logout, close the terminal, or just shut down your machine, the job will continue until completion. 
+
+To check if a job is still running use the `jobs` and the `ps` (process command). 
+`jobs` --> shows the runing jobs running, the output looks like so: 
+
+```sh
+(aristotle03 melt) > jobs
+[1]-  Running                 lmp_aristotle -in in.melt > out.melt &
+[2]+  Running                 lmp_aristotle -in in2.melt > out2.melt & 
+``` 
+Note: you can run multiple jobs, as above. 
+
+to bring one of the jobs back to the foreground, type
+
+`fg %#` --> where `#` should be replaced by the job number, so if we want to bring forward the second job we do: 
+
+`fg %2` 
+
+and to send it back to the background, just type
+
+`CTRL + Z ` + `bg` + `Enter'
+
+Another option is to use the 'ps' command, but we will leave it for another time. 
 
 **Congratulations! you run the first lammps simulation**
 
 ### Inspect the LAMMPS Input file
-Lets inspect the lammps input file `in.melt`. 
+Lets inspect the lammps input file `in.melt`. Since this file is already on Aristotle we need some tools either on the machine itself, or we need to copy it to our desktop/laptop and look at it. The same of course holds for the out.melt file, and in general to any file on the remote server (which is Aristotle in our case almost always).
 
-One option is to use [scp or winscp]((https://www.rc.ucl.ac.uk/docs/howto/#windows-winscp)) and copy the file to your desktop/laptop, view, edit, change etc., then use scp or winscp but in this tutorial we will edit the file directly on Aristotle using the simple text editor program called [nano](https://www.nano-editor.org) (if you are familiar with it, or are feeling adventures ;-), you may try to learn [vim](https://opensource.com/article/19/3/getting-started-vim)). 
+One option is to use [scp or winscp]((https://www.rc.ucl.ac.uk/docs/howto/#windows-winscp)) and copy the file to your desktop/laptop, view, edit, change etc., using your windows tool which you are familiar with (you can use any tool which edits text, not wordpad or MS word as they will alter the format and make it void! 
 
-First we activate nano (we need to do this every time we log in to Aristotle):
+It is recommended to use a tool like [vscode](https://code.visualstudio.com) which is an open source solution from Microsoft, and can even do remote editing in addition to local files, see [https://code.visualstudio.com/docs/remote/ssh](https://code.visualstudio.com/docs/remote/ssh) for how to set it up for remote editing.
 
-* `modeule load nano`
+
+In this tutorial we will edit the file directly on Aristotle i.e., without copying it over. For this we will use the simple text editor program called [nano](https://www.nano-editor.org) (alternatively, if you are familiar with `vim`, or are feeling adventures ;-), you may try to learn [vim](https://opensource.com/article/19/3/getting-started-vim) instead, which is already active by default). `nano` has to be activated first: 
+
+* `module load nano`
 
 now run 
 
-* `nano in.melt`  and use the arrow keys to move arround. Identify all the various parts of the input file, and consult the lammps manual for help! 
+* `nano in.melt`  and use the arrow keys to move around. Identify all the various parts of the input file, and consult the lammps manual for help! 
   
 
-  Tip: instead of scp/winscp and a CMD terminal, you can use the more advanced, but easy to use  [MobaXterm](https://www.rc.ucl.ac.uk/docs/howto/#mobaxterm)) program!
+  Another Tip: instead of scp/winscp and a CMD terminal, you can use the more advanced, but easy to use  [MobaXterm](https://www.rc.ucl.ac.uk/docs/howto/#mobaxterm)) program!
 
 
 
-## Visualisation of the results 
-In order to visualise the results we need to use our laptop/desktop, as remote visualisation may be inefficient. 
-* on your laptop/Desktop, if you are windows user, 
+## Visualization 
+WIP...coming soon (UCL students can use the NSCI0028 module tutorials on moodle) 
