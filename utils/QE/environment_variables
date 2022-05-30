@@ -22,7 +22,7 @@ BIN_DIR=$PREFIX/bin
 PSEUDO_DIR=$PREFIX/pseudo
 # Beware: everything in $TMP_DIR will be destroyed !
 #TMP_DIR=$PREFIX/tempdir
-TMP_DIR=/tmp/ucqsaha_tempdir
+TMP_DIR=/tmp/<ucl-user>_tempdir.  # REPLACE WITH YOUR UCL USER! 
 
 # There should be no need to change anything below this line
 
