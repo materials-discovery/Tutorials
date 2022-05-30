@@ -14,13 +14,6 @@
 | `git pull` | pull the current branch from the remote |
  
 
-
-
-# Shared Good sources for learning Git and Github
-
-*Please add interesting links to information and tutorials for github/git that you find. All staff and group members are free to edit of course and propose new links, or update existing ones.*
-
-
 ## coming soon: 
 - how to install git-bash under windows
 - how to install and use WSL2 under windows. 

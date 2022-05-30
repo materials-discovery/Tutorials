@@ -20,7 +20,7 @@ alias l="ls -prth"
 
 
 
-# uncomment to load lammps in every log in
+uncomment to load lammps in every log in
 module load default-modules
 module -f unload compilers mpi gcc-libs
 module load beta-modules
@@ -33,4 +33,12 @@ module load ucx/1.9.0/gnu-10.2.0
 module load mpi/openmpi/4.0.5/gnu-10.2.0
 module load python3/3.9-gnu-10.2.0-aristotle
 module load lammps/29sep21up2/basic/gnu-10.2.0-aristotle
+
+
+module load compilers/intel/2018/update3
+module load mpi/intel/2018/update3
+module load xorg-utils/X11R7.7
+module load gnuplot/5.0.1
+module load quantum-espresso/6.5-impi/thermo_pw-1.2.1/intel-2018
+
 
