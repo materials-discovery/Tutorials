@@ -8,7 +8,7 @@ It is not intended to be a full tutorial for Quantum ESPRESSO it self, but rathe
 
 All Logos and external content is copyrighted with respective owners, all links, are provided for information purposes only as is, if you spot something wrong or inappropriate please contact A.H.
 
-## What is LAMMPS
+## What is QE
 * Quantum ESPRESSO official website:  [https://www.quantum-espresso.org](https://www.quantum-espresso.org). 
 
 ![https://www.quantum-espresso.org](./figures/quantum_ogo_ok.png)
@@ -17,7 +17,7 @@ All Logos and external content is copyrighted with respective owners, all links,
 
 
 
-## Where can I find more information about LAMMPS
+## Where can I find more information about QE
 The best source of information is the [Quantum ESPRESSO home page](https://www.quantum-espresso.org/) and the [documentation](https://www.quantum-espresso.org/documentation/). Quantum ESPRESSO is also found on the official [github repository](https://github.com/QEF/q-e).
 
 Also see the official documentation and tutorials page: [https://www.quantum-espresso.org/tutorials/](https://www.quantum-espresso.org/tutorials/)
