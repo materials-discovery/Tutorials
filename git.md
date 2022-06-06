@@ -12,9 +12,18 @@
 | `git fetch --all` | git fetch all branches from the remote (GitHub usually in our case) so that subsequent git checkout remote-branch-name will actually get the remote branch and not create a new one, so always do this before checking (switching) to a remote branch. |
 | `git checkout branch-name`| switch to the existing branch (always do git fetch --all before hand) from remote (GitHub). usually should be followed by git pull |
 | `git pull` | pull the current branch from the remote |
- 
+
 
 ## coming soon: 
 - how to install git-bash under windows
 - how to install and use WSL2 under windows. 
 - how to use jupyter notebook...  
+
+## Change origin
+Create a new repo at github. Clone the repo from  to your local machine. Now you can work with it just like any other github repo. To pull in patches from upstream, simply run `git pull upstream master && git push origin master` [stackoverflow](https://stackoverflow.com/questions/5181845/git-push-existing-repo-to-a-new-and-different-remote-repo-server) |
+
+```
+git remote rename origin upstream 
+git remote add origin URL_TO_GITHUB_REP
+git push origin master
+``` 
