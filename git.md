@@ -20,6 +20,8 @@
 - how to use jupyter notebook...  
 
 ## Change origin
+* Git push existing repo to a new and different remote repo server?
+
 Create a new repo at github. Clone the repo from  to your local machine. Now you can work with it just like any other github repo. To pull in patches from upstream, simply run `git pull upstream master && git push origin master` [stackoverflow](https://stackoverflow.com/questions/5181845/git-push-existing-repo-to-a-new-and-different-remote-repo-server) |
 
 ```
