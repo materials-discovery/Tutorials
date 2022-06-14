@@ -5,7 +5,7 @@
 
 |command  | description   |
 |--|--|
-| `git remote -v -a`                    | Run in a Terminal in local git repository. Shows the connected remote (usually on github) |
+| `git remote -v `                    | Run in a Terminal in local git repository. Shows the connected remote (usually on github) |
 | `alias gitdiff="git difftool --tool=vimdiff ` | add this to your .aliases or .bashrc (in aristotle)/.zshrc (on mac) to see a diff side by side. You can also run the command directly in a terminal so: `  git difftool --tool=vimdiff file1 file2` etc. |
 | `git add -u ` | update all changes done in local directory instead of doing `git add file1 file2...`, useful especially when one moves or deletes a number of files|
 | `git add newFile` | if you create a new source code file, then you need to add the new file it to thr git system (done locally in your own repository) |
