@@ -20,7 +20,7 @@ alias l="ls -prth"
 
 
 
-uncomment to load lammps in every log in
+# uncomment to load lammps in every log in
 module load default-modules
 module -f unload compilers mpi gcc-libs
 module load beta-modules
