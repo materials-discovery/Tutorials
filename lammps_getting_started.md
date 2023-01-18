@@ -1,3 +1,5 @@
+
+
 # LAMMPS on Aristotle@UCL
 
 # Introduction 
@@ -9,7 +11,7 @@ It is not intended to be a full tutorial for LAMMPS it self, but rather an initi
 All Logos and external content is copyrighted with respective owners, all links, are provided for information purposes only as is, if you spot something wrong or inappropriate please contact A.H.
 
 ## What is LAMMPS
-* LAMMPS official website:  [https://www.lammps.org](https://www.lammps.org). 
+* LAMMPS official website:  https://www.lammps.org](https://www.lammps.org). 
 
 ![https://www.lammps.org](./figures/lammps_logo.png)
 
