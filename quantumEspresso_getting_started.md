@@ -11,7 +11,7 @@ All Logos and external content is copyrighted with respective owners, all links,
 ## What is QE
 * Quantum ESPRESSO official website:  [https://www.quantum-espresso.org](https://www.quantum-espresso.org). 
 
-![https://www.quantum-espresso.org](./figures/quantum_ogo_ok.png)
+![https://www.quantum-espresso.org](quantum_ogo_ok.png)
 
 > Quantum ESPRESSO is an integrated suite of Open-Source computer codes for electronic-structure calculations and materials modeling at the nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials.
 
@@ -48,7 +48,7 @@ module load quantum-espresso/6.5-impi/thermo_pw-1.2.1/intel-2018
 
 * **Tip** 
 * 
-* cut and paste the above into the file .bashrc in your home folder on Aristotle, then you never need to redo this again (hint, use `nano`). alternatively, use the `.bashrc` and `.bash_profile' files in the folder `utils` in this repo, move them to your  home folder in Aristotle and then log out and then log in.  Note, this will give you also the option to run LAMMPS too, see [LAMMPS getting Started](./lammps_getting_started.md).
+* cut and paste the above into the file .bashrc in your home folder on Aristotle, then you never need to redo this again (hint, use `nano`). alternatively, use the `.bashrc` and `.bash_profile' files in the folder `utils` in this repo, move them to your  home folder in Aristotle and then log out and then log in.  Note, this will give you also the option to run LAMMPS too, see [LAMMPS getting Started](lammps_getting_started.md).
 
 Now you should be able to type in the command line the following for the plane wave pseudo potential code: 
 
@@ -111,7 +111,7 @@ follow these steps in the Terminal on Aristotle:
 * `cp -r ~/q-e/PP/examples/example01.`  --> this will copy the entire `example01` folder from the qe_tur_1 folder
 
 
-Check the `README` file inside the example01 folder describing the various steps the script is performing. The `run_example` file is a shell script (like .bat files in windows) which prepares input files, executes them, and does some pre and post processing. It is a good practice to open the file and inspect it using e.g. `nano`, or use windSCP to copy and view, see [file_howto.md](aristotle_howto.md) for more information. 
+Check the `README` file inside the example01 folder describing the various steps the script is performing. The `run_example` file is a shell script (like .bat files in windows) which prepares input files, executes them, and does some pre and post processing. It is a good practice to open the file and inspect it using e.g. `nano`, or use windSCP to copy and view, see [file_howto.md](tutorials/Tutorials/aristotle_howto.md) for more information. 
 
 you can also check the top level readme file of the example folder of the Plane wave code found in the path: `~/q-e/PP/examples` which tells us that `example01` shows how to use pw.x and postprocessing codes to make a contour plot in the [110] plane of the charge density for Si, and to plot the band structure of Si.
 
@@ -185,7 +185,7 @@ plot the band structure of Si.
 
 **Congratulations! you have completed your first QE job! **
 
-you can then enter the results folder and inspect the outcome. since there are some postscript and files, it may be best if you copy the entire folder to your pc, inspect the results there (using scp, etc, as shown in [file_howto.md](files_howto.md). 
+you can then enter the results folder and inspect the outcome. since there are some postscript and files, it may be best if you copy the entire folder to your pc, inspect the results there (using scp, etc, as shown in [file_howto.md](Files_Howto.md). 
 
 
 # Running your own scripts

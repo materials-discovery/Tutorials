@@ -1,7 +1,9 @@
+
+
 # LAMMPS on Aristotle@UCL
 
 # Introduction 
-This is a getting started tutorial/howto for setting up and running LAMMPS [https://www.lammps.org](https://www.lammps.org) on Aristotle at UCL. 
+This is a getting started tutorial/how to for setting up and running LAMMPS [https://www.lammps.org](https://www.lammps.org) on Aristotle at UCL. 
 
 ## Disclaimer 
 It is not intended to be a full tutorial for LAMMPS it self, but rather an initial document enabling new students to find their path in the information stream, and also allow more experienced users a place to store links and share tips about LAMMPS, specifically designed and targeting the Student Master Projects.
@@ -9,9 +11,9 @@ It is not intended to be a full tutorial for LAMMPS it self, but rather an initi
 All Logos and external content is copyrighted with respective owners, all links, are provided for information purposes only as is, if you spot something wrong or inappropriate please contact A.H.
 
 ## What is LAMMPS
-* LAMMPS official website:  [https://www.lammps.org](https://www.lammps.org). 
+* LAMMPS official website:  https://www.lammps.org](https://www.lammps.org). 
 
-![https://www.lammps.org](./figures/lammps_logo.png)
+![https://www.lammps.org](tutorials/Tutorials/figures/lammps_logo.png)
 
 LAMMPS stands for Large-scale Atomic/Molecular Massively Parallel Simulator.
 
@@ -23,15 +25,13 @@ The best source of information is the [LAMMPS home page](https://www.lammps.org)
 Also see this tutorials page: [https://lammps.org/tutorials.html](https://lammps.org/tutorials.html)
 
 ## Prerequisite 
-in order to follow the tutorials and howto's here you should first read the `aristotle_howto.md` in this repo and get aquatinted with using the terminal and linux shell. 
+in order to follow the tutorials and how to's here you should first read the `aristotle_howto.md` in this repo and get aquatinted with using the terminal and linux shell. 
 
 # Setting up LAMMPS on Aristotle 
 
-Please run the following commands in the terminal (copy and paste after the
+Please run the following commands in the terminal (copy and paste after the `-bash-4.2$ ` or `%` prompt (tip you can change the prompt look, [check this out](https://wiki.archlinux.org/title/Bash/Prompt_customization) or simpley execute this in a terminal `export PS1="$PWD "` and if you like it, just added to the ~./bashrc file in your home folder) 
 
-`-bash-4.2$ ` 
-
-if using Aristotle). 
+if using Aristotle, run the following to set some program paths and configurations:  
 
 ```bash
 module load default-modules
@@ -51,15 +51,15 @@ module load lammps/29sep21up2/basic/gnu-10.2.0-aristotle
 ```
 
 * **Tip** 
-* 
-* cut and paste the above into the file .bashrc in your home folder on Aristotle, then you never need to redo this again (hint, use `nano`). alternatively, use the `.bashrc` and `.bash_profile' files in the folder `utils` in this repo, move them to your  home folder in Aristotle and then log out and then log in.  
+	* cut and paste the above into the file ~/.bashrc in your home folder on Aristotle, then you never need to redo this again (hint, use e.g., `nano` and copy paste the above).
+	* Alternatively, use the `.bashrc` and  `.bash_profile` files in the folder `utils` in this repo, move them to your  home folder in Aristotle and then log out and then log in. You are all set.   
 
 Now you should be able to type in the command line the following 
 
 ```shell
 (aristotle03 ~) > which lmp_aristotle 
 ```
-If you see something like this, you are all set for simple lammps jobs:
+If you see something like this, you are all set for simple LAMMPS jobs:
 
 ```shell
 /home/ccaabaa/apps/lammps/29Sep2021_update2/basic-aristotle/gnu-10.2.0/bin/lmp_aristotle
@@ -67,10 +67,12 @@ If you see something like this, you are all set for simple lammps jobs:
 ```
 # Run an example 
 
-## Prepare a lammps work folder  
-It is a good practice to create a new folder for each project/tutorial. In this case we create on Aristotle (using the terminal) a new folder in the home folder. You may chose any folder name you want, here we choose "lammps_tut_1" : 
+## Prepare a LAMMPS work folder  
+It is a good practice to create a new folder for each project/tutorial. 
 
-type in the terminal prompt: 
+In this case we create on Aristotle (using the terminal or WINSCP) a new folder in the home folder. You may chose any folder name you want, here we choose "lammps_tut_1" : 
+
+if you prefer the Terminal, type in the terminal prompt: 
 
 * `cd ` + press the Enter key to return to the main folder of your account (always `cd` without arguments gets you back to the home folder, its like the home button on a phone). 
 * `mkdir lammps_tut_1` + Enter to create this folder (use any name you want) 
@@ -85,7 +87,7 @@ you will see no output, as this is a new folder ;-)
 
 
 ## Get some LAMMPS examples
-we want to use some LAMMPS examples, the easiest way to get them directly to your account in Aristotle is to clone the entire LAMMPS repository, this way not only the examples are available, but also the documentation and the source code. Of course you can later delete any folder you do not want using the Unix `rm ` command. 
+we want to use some LAMMPS examples, the **easiest way to get them directly to your account** in Aristotle is to clone the entire LAMMPS repository, this way not only the examples are available, but also the documentation and the source code. Of course you can later delete any folder you do not want using the Unix `rm ` command. 
 
 We shall use some of the official LAMMPS tutorials. 
 
@@ -101,13 +103,13 @@ this will take a while, once the entire repository is cloned, you can browse it 
 
 ### Run the simple Melt Example: 
 
-follwo these steps in the Terminal on Aristotle: 
+follow these steps in the Terminal on Aristotle: 
 
 * `cd ` + Enter, to got the home folder
 * `cd lammps_tut_1`
-* `cp -r ~/lammps/examples/melt/ .` --> this will copy the entire `melt` example folder from the lammps examples to your lammps_tut_1 folder
+* `cp -r ~/lammps/examples/melt/ .` --> this will copy the entire `melt` example folder from the LAMMPS examples to your `lammps_tut_1` folder
 * `cd melt`
-* `lmp_aristotle -i in.melt`  --> this will actually run lammps interactively, i.e, it will run in the foreground in teh terminal, the results will be printed directly to the screen. Here is how the first few lines look like: 
+* `lmp_aristotle -i in.melt`  --> this will actually run LAMMPS interactively, i.e, it will run in the foreground in the terminal, the results will be printed directly to the screen. Here is how the first few lines look like: 
 
 ```sh
 (aristotle03 melt) > lmp_aristotle -in in.melt > out.melt
@@ -129,7 +131,7 @@ Neighbor list info ...
 **Note there is a warning related to mismatch of libraries, this is due to cross compilation for other machines, it can be ignored safely**
 
 * While it is fine to run short tasks interactively, later, for your projects, you would need to run much longer jobs and if the terminal is closed while the job is still running, or you turn off or put your machine to sleep the job (the lammps application) will stop and crash. Hence instead we now run in the background: 
-* run lammps in the background with output stored in lammps.out: 
+* run LAMMPS in the background with output stored in lammps.out: 
 
 
 
@@ -137,10 +139,10 @@ Neighbor list info ...
 lmp_aristotle -in in.file > out.melt & 
 ```
 
-the `>` is a redirection, it instructs the shell (the UNIX/Linux CLI programme) to redirect all output that normally is printed on the screen (i.e., terminal) to a file, in our case its called out.melt. The `&` means that the job is going to run in teh background, so that even when you logout, close the terminal, or just shut down your machine, the job will continue until completion. 
+the `>` is a redirection, it instructs the shell (the UNIX/Linux CLI programme) to redirect all output that normally is printed on the screen (i.e., terminal) to a file, in our case its called out.melt. The `&` means that the job is going to run in the background, so that even when you logout, close the terminal, or just shut down your machine, the job will continue until completion. 
 
 To check if a job is still running use the `jobs` and the `ps` (process command). 
-`jobs` --> shows the runing jobs running, the output looks like so: 
+`jobs` --> shows the running jobs running, the output looks like so: 
 
 ```sh
 (aristotle03 melt) > jobs
@@ -182,7 +184,29 @@ now run
 
   Another Tip: instead of scp/winscp and a CMD terminal, you can use the more advanced, but easy to use  [MobaXterm](https://www.rc.ucl.ac.uk/docs/howto/#mobaxterm)) program!
 
+# Plotting the thermal properties 
+
+## Option 1: creating plots without copying data to your local machine
+
+this requires some advanced but not too difficult knowledge of the Unix/Linux X11 (X Server) which is a standard for network graphical user interfaces and applications widely use in the scientific community. 
+
+For this, if you are using a mac, you need to get [XQuartz](https://www.xquartz.org/) either by installing directly or using the [homebrew](https://brew.sh) system. If you are using a windows machine, use [Putty](https://www.putty.org/) with Exceed (similar to XQuartz...) . The latter is available in the UCL PC @Anywhere desktop. (Hint if you have a MAC or IPAD or even a windows machine etc, you can still use the standard UCL Desktop by following the instructions here [# Desktop@UCL Anywhere](https://www.ucl.ac.uk/isd/services/computers/remote-access/desktopucl-anywhere) )
+
+check also (for windows) [### Using PuTTY with Exceed](https://www.rc.ucl.ac.uk/docs/Supplementary/X-Forwarding/#using-putty-with-exceed)
+ or see summary here [putty wth exceed summary](putty_exeed_ucl.md)
+for mac run XQuartz and simply open a terminal and run `ssh -X aritotle.rc.ucl.ac.uk -l <yourusername>` and thats it.
+
+Once you establish an ssh connection to Aristotle using putty+Exceed on windows or terminal + XQuartz on MAC with the X forwarding option (-X on mac, and check the above putty + xceed page for windows) you will be able to run graphical programs remotely. see (UCL Research Computing Documentation)[https://www.rc.ucl.ac.uk/docs/howto/]
 
 
-## Visualization 
-WIP...coming soon (UCL students can use the NSCI0028 module tutorials on moodle) 
+
+so now we can run gnuplot directly on Aristotle: 
+
+
+
+
+## Option 1: creating plots with copying data to your local machine
+
+# Visualisation 
+
+
