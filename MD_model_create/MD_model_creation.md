@@ -45,7 +45,7 @@ The VESTA window after loading the above Cu CIF file.
 
 4. load it to VMD and Visualise it 
 5. load it to OVITO and visualise it 
-6. now we will move to [Optimise lattice parameter for CU](./Cu.md) tutorial
+6. now we will move to [Optimise lattice parameter for Cu](~/Cu.md) tutorial
 	1. we will also look at some available tutorials that use instead the LAMMPS built in crystal maker functionality. [WIP](Tchupp_tutorial.md)
 
 
