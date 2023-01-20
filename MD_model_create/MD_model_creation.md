@@ -40,12 +40,12 @@ The VESTA window after loading the above Cu CIF file.
 	Now you should have a file called `4105040.lmp` 
 	6. use the `unix/linux` command `more` or `less` to view it: 
 	![[Pasted image 20230118122240.png]]
-	inspect  the file: [4105040.lmp](tutorials/Tutorials/MD_model_create/4105040.lmp) and compare to the [lammps manual](https://docs.lammps.org/99/data_format.html)
+	inspect  the file: [4105040.lmp](4105040.lmp) and compare to the [lammps manual](https://docs.lammps.org/99/data_format.html)
 	8. by the way, ATOMSK can do much more, you can explore it here: [Explore ATOMSK]()
 
 4. load it to VMD and Visualise it 
 5. load it to OVITO and visualise it 
-6. now we will move to [Optimise lattice parameter for CU](Cu.md) tutorial
+6. now we will move to [Optimise lattice parameter for CU](linux_tutorials/MD_tutorial_1/Cu.md) tutorial
 	1. we will also look at some available tutorials that use instead the LAMMPS built in crystal maker functionality. [WIP](Tchupp_tutorial.md)
 
 
