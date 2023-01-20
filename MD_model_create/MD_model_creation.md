@@ -13,7 +13,7 @@ In this tutorial we will do the following:
 1. Use the http://www.crystallography.net/ database to search and download some materials models in CIF format (Crystallographic Information File is the standard format for storing crystallographic structural data, see https://www.ccdc.cam.ac.uk/community/access-deposit-structures/deposit-a-structure/guide-to-cifs/)
 2. we will specifically download a simple metal (Cu) CIF file (any one will do as long as the space group is Fm-3m)
 	1. we are going to use this one for example: http://www.crystallography.net/cod/4105040.cif
-3. If you are using your own computer, please download and install [VESTA](tutorials/Tutorials/MD_model_create/VESTA.md) as in this tutorial [VESTA Tutorial](tutorials/Tutorials/MD_model_create/VESTA.md). If you are using UCL@Anywhere desktop/machine, VESTA is already available, so no need to reinstall. 
+3. If you are using your own computer, please download and install [VESTA](VESTA.md) as in this tutorial [VESTA Tutorial](VESTA.md). If you are using UCL@Anywhere desktop/machine, VESTA is already available, so no need to reinstall. 
 4. Open VESTA, then load the Cu CIF file and visualise it
 Below are some images of the steps: 
 
