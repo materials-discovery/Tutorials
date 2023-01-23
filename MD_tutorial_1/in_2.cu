@@ -21,7 +21,7 @@ neigh_modify	delay 10
 
 fix		1 all nve
 
-velociy all create 1200 2134983 dist gaussian 
+velocity all create 1200 2134983 dist gaussian 
 
 # https://docs.lammps.org/thermo.html
 thermo		1
