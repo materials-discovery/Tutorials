@@ -36,4 +36,27 @@ Create a new repo at github. Clone the repo from  to your local machine. Now you
 git remote rename origin upstream 
 git remote add origin URL_TO_GITHUB_REP
 git push origin master
-``` 
+```
+
+## requirements.txt - install directly from git
+```
+# Regular packages 
+requests==2.25.1
+numpy==1.19.5
+
+# GitHub repository, from master/main branch
+git+https://github.com/username/repository.git
+
+# GitHub repository from a specific branch
+git+https://github.com/username/repository.git@dev
+
+# GitHub repository from a specific tag
+git+https://github.com/username/repository.git@v1.0.0
+
+# GitHub repository from a specific commit
+git+https://github.com/username/repository.git@<commit_hash>
+
+# GitHub repository where the package is located in a subdirectory
+git+https://github.com/username/repository.git@branch_name#subdirectory=src
+
+```
