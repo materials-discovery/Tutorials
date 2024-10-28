@@ -13,7 +13,7 @@ All Logos and external content is copyrighted with respective owners, all links,
 ## What is LAMMPS
 * LAMMPS official website:  https://www.lammps.org](https://www.lammps.org). 
 
-![https://www.lammps.org](Tutorials/figures/lammps_logo.png)
+![https://www.lammps.org](figures/lammps_logo.png)
 
 LAMMPS stands for Large-scale Atomic/Molecular Massively Parallel Simulator.
 
