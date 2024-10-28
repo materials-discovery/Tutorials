@@ -13,7 +13,7 @@ All Logos and external content is copyrighted with respective owners, all links,
 ## What is LAMMPS
 * LAMMPS official website:  https://www.lammps.org](https://www.lammps.org). 
 
-![https://www.lammps.org](tutorials/Tutorials/figures/lammps_logo.png)
+![https://www.lammps.org](Tutorials/figures/lammps_logo.png)
 
 LAMMPS stands for Large-scale Atomic/Molecular Massively Parallel Simulator.
 
@@ -136,7 +136,7 @@ Neighbor list info ...
 
 
 ```sh 
-lmp_aristotle -in in.file > out.melt & 
+nohup lmp_aristotle -in in.melt > out.melt & 
 ```
 
 the `>` is a redirection, it instructs the shell (the UNIX/Linux CLI programme) to redirect all output that normally is printed on the screen (i.e., terminal) to a file, in our case its called out.melt. The `&` means that the job is going to run in the background, so that even when you logout, close the terminal, or just shut down your machine, the job will continue until completion. 
@@ -198,15 +198,4 @@ for mac run XQuartz and simply open a terminal and run `ssh -X aritotle.rc.ucl.a
 
 Once you establish an ssh connection to Aristotle using putty+Exceed on windows or terminal + XQuartz on MAC with the X forwarding option (-X on mac, and check the above putty + xceed page for windows) you will be able to run graphical programs remotely. see (UCL Research Computing Documentation)[https://www.rc.ucl.ac.uk/docs/howto/]
 
-
-
-so now we can run gnuplot directly on Aristotle: 
-
-
-
-
-## Option 1: creating plots with copying data to your local machine
-
-# Visualisation 
-
-
+so now we can run gnuplot directly on Aristotle.
