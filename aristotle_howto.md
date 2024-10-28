@@ -29,7 +29,9 @@ Replace <your_UCL_user_id> with your central UCL username, and <system_name> wit
 
 **You need to use a Terminal for running applications on Aristotle!**
 
-For this tutorial you need a Terminal program running an appropriate shell on your laptop/desktop and connect to a shell (a remote terminal) in Aristotle. ![](figures/Linux_Terminal.png).
+For this tutorial you need a Terminal program running an appropriate shell on your laptop/desktop and connect to a shell (a remote terminal) in Aristotle. 
+
+![](figures/Linux_Terminal.png).
 
 This is also needed if you are using [UCL Desktop@Anywhere](https://www.ucl.ac.uk/isd/services/computers/remote-access/desktopucl-anywhere)
 
