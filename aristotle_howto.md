@@ -40,7 +40,7 @@ On Windows you need something that will give you a suitable terminal and ssh - u
 * Get [putty](https://www.rc.ucl.ac.uk/docs/howto/#windows-putty). For details how to set it up see: [https://www.rc.ucl.ac.uk/docs/howto/](https://www.rc.ucl.ac.uk/docs/howto/)
 * or on windows 10/11 open a windows "CMD" or Power-shell. To use CMD, go to the search area in the panel and type cmd or command, it should appear like so: 
 
-![](tutorials/Tutorials/figures/cmd_search2.png) 
+![](Tutorials/figures/cmd_search2.png) 
 
 then click on Command Prompt to launch it, and type in it 
 
@@ -60,7 +60,7 @@ Then you will be asked for the password. **Note while you type the password on t
 
 Now you should be logged in and get something similar to the following prompt: 
 
-![](tutorials/Tutorials/figures/cmd.png)
+![](Tutorials/figures/cmd.png)
 
 ### More information about using a Unix(R) like shell - The Command Line Interface (CLI)
 When you log into Aristotle you are actually getting a terminal with a command line interface (CLI). A CLI is a text-based interface that allows users to manage the computer and run applications, and organize files. A CLI expects an input command, executes it, and prints the output. Specifically, once you ssh into Aristotle you will get a command line with a shell CLI  running in it, usually this will be a bash shell. 
