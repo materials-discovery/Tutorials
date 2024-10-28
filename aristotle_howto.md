@@ -29,7 +29,7 @@ Replace <your_UCL_user_id> with your central UCL username, and <system_name> wit
 
 **You need to use a Terminal for running applications on Aristotle!**
 
-For this tutorial you need a Terminal program running an appropriate shell on your laptop/desktop and connect to a shell (a remote terminal) in Aristotle. ![](tutorials/Tutorials/figures/Linux_Terminal.png).
+For this tutorial you need a Terminal program running an appropriate shell on your laptop/desktop and connect to a shell (a remote terminal) in Aristotle. ![](figures/Linux_Terminal.png).
 
 This is also needed if you are using [UCL Desktop@Anywhere](https://www.ucl.ac.uk/isd/services/computers/remote-access/desktopucl-anywhere)
 
@@ -60,7 +60,7 @@ Then you will be asked for the password. **Note while you type the password on t
 
 Now you should be logged in and get something similar to the following prompt: 
 
-![](Tutorials/figures/cmd.png)
+![](figures/cmd.png)
 
 ### More information about using a Unix(R) like shell - The Command Line Interface (CLI)
 When you log into Aristotle you are actually getting a terminal with a command line interface (CLI). A CLI is a text-based interface that allows users to manage the computer and run applications, and organize files. A CLI expects an input command, executes it, and prints the output. Specifically, once you ssh into Aristotle you will get a command line with a shell CLI  running in it, usually this will be a bash shell. 
