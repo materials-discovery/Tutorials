@@ -40,7 +40,7 @@ On Windows you need something that will give you a suitable terminal and ssh - u
 * Get [putty](https://www.rc.ucl.ac.uk/docs/howto/#windows-putty). For details how to set it up see: [https://www.rc.ucl.ac.uk/docs/howto/](https://www.rc.ucl.ac.uk/docs/howto/)
 * or on windows 10/11 open a windows "CMD" or Power-shell. To use CMD, go to the search area in the panel and type cmd or command, it should appear like so: 
 
-![](Tutorials/figures/cmd_search2.png) 
+![](figures/cmd_search2.png) 
 
 then click on Command Prompt to launch it, and type in it 
 
