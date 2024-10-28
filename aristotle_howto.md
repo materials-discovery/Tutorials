@@ -38,7 +38,7 @@ This is also needed if you are using [UCL Desktop@Anywhere](https://www.ucl.ac.u
 On Windows you need something that will give you a suitable terminal and ssh - usually PuTTY, or on Windows 10/11 you can use the builtin OpenSSH from a command prompt and type the same ssh command as the Linux instructions.
 
 * Get [putty](https://www.rc.ucl.ac.uk/docs/howto/#windows-putty). For details how to set it up see: [https://www.rc.ucl.ac.uk/docs/howto/](https://www.rc.ucl.ac.uk/docs/howto/)
-* or on windows 100/11 open a windows "CMD" or Power-shell. To use CMD, go to the search area in the panel and type cmd or command, it should appear like so: 
+* or on windows 10/11 open a windows "CMD" or Power-shell. To use CMD, go to the search area in the panel and type cmd or command, it should appear like so: 
 
 ![](tutorials/Tutorials/figures/cmd_search2.png) 
 
@@ -70,7 +70,7 @@ For much more thorough information and help about the linux/Mac (in fact, more g
 # Copying files from/to your PC/MAC to/from Aristotle 
 
 ## Using a terminal
-similar to the `ssh` package (secure shell) for logging in, there is a secure copy package called `scp` which allows one to copy files between machines using a terminal. It is invoked similar to ssh. 
+Similar to the `ssh` package (secure shell) for logging in, there is a secure copy package called `scp` which allows one to copy files between machines using a terminal. It is invoked similar to ssh. 
 
 In general (commands are always run in a Terminal when preceded with `>$ ` )
 
@@ -80,15 +80,16 @@ where `<PATH-TO-WINDOWS-FILE> ` should be replaced with the current windows path
 
 note on unix the folder separator is a forward slash (`/`) unlike in windows which is a backslash (`\`) 
 
-For example suppose you want to copy `somefile.in` in your home folder in windows to a folder called ProjectX on Aristotle:
+## Example
+Suppose you want to copy `somefile.in` in your home folder in windows to a folder called ProjectX on Aristotle:
 
 `scp -r C:\Users\username\somefile.in  <ucl-user>@aristotle.rc.ucl.ac.uk:/home/<ucl-user>/ProjectX/`
 
 Note that `/home/<ucl-user>` is your home user folder on Aristotle (and in, practically, all unix systems)
 to copy the file back from Aristotle to your PC, just reverse, like so: 
 
-`scp -r C:\Users\username\somefile.in  <ucl-user>@aristotle.rc.ucl.ac.uk:/home/<ucl-user>/ProjectX/`
-
+`scp -r <ucl-user>@aristotle.rc.ucl.ac.uk:/home/<ucl-user>/ProjectX/somefile.in C:\Users\username\`
+Note: You can also download some files on materials.discovery.org to your local space and type such command to transfer the files to Aristotle
 
 ## Using a GUI programme
 
@@ -99,10 +100,7 @@ or MobaXterm [https://mobaxterm.mobatek.net](https://mobaxterm.mobatek.net) on w
 see [https://www.ucl.ac.uk/isd/accessing-research-data-storage-through-ssh-windows](https://www.ucl.ac.uk/isd/accessing-research-data-storage-through-ssh-windows)
 
 ## Setting up and running Lammps on Aristotle 
-See the file `aristotle_lammps_howto.md` in this repo. 
-
-## Setting up and running Quantum Espresso on Aristotle 
-See the file `aristotle_quantumEspresso_howto.md` in this repo. 
+See the file `aristotle_lammps_howto.md` in this repo.
 
 
 # Loading standard modules into the Aristotle environment 
