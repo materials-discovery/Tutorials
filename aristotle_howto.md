@@ -12,7 +12,7 @@ For more details see the Information Services Division web pages at UCL: [ISD](
 
 ## How to connect to Aristotle from your PC/MAC/LINUX machine
 
-for the most up to date information, see the official documentation on [UCL-IDS website](https://www.rc.ucl.ac.uk/docs/howto/). An excerpt is below, but always refer or at least check the official docs. 
+for the most up to date information, see the official documentation on [UCL-IDS website](https://www.rc.ucl.ac.uk/docs/howto/). An example is below, but always refer or at least check the official docs. 
 
 ## If you are using a Linux / Unix / Mac OS X / Windows 10 or 11
 
@@ -31,7 +31,10 @@ Replace <your_UCL_user_id> with your central UCL username, and <system_name> wit
 
 For this tutorial you need a Terminal program running an appropriate shell on your laptop/desktop and connect to a shell (a remote terminal) in Aristotle. 
 
-![](figures/Linux_Terminal.png).
+
+<img src="./figures/Linux_Terminal.png" alt="Linux_Terminal" width="300" height="auto">
+
+
 
 This is also needed if you are using [UCL Desktop@Anywhere](https://www.ucl.ac.uk/isd/services/computers/remote-access/desktopucl-anywhere)
 
@@ -95,14 +98,17 @@ Note: You can also download some files on materials.discovery.org to your local 
 
 ## Using a GUI programme
 
-you can use a few GUI (graphical user interface) programs like winSCP [https://winscp.net/eng/index.php](https://winscp.net/eng/index.php)
-or MobaXterm [https://mobaxterm.mobatek.net](https://mobaxterm.mobatek.net) on windows or Filezilla [https://filezilla-project.org/](https://filezilla-project.org/) which works also on a mac and linux. See the respective pages for how to, and ask the PGT in case you need further help.
+you can use a few GUI (graphical user interface) programs like [winSCP](https://winscp.net/eng/index.php)
+or [MobaXterm](https://mobaxterm.mobatek.net) on windows or [Filezilla] (https://filezilla-project.org/) which works also on a mac and linux. For mac users, you can also use [Cyberduck](https://cyberduck.io), see image below. 
+
+<img src="./figures/cyberduck.png" alt="cyberduck" width="800" height="auto">
+
+See the respective pages for how to, and ask the PGT in case you need further help.
+
 
 ## Other information 
 see [https://www.ucl.ac.uk/isd/accessing-research-data-storage-through-ssh-windows](https://www.ucl.ac.uk/isd/accessing-research-data-storage-through-ssh-windows)
 
-## Setting up and running Lammps on Aristotle 
-See the file `aristotle_lammps_howto.md` in this repo.
 
 
 # Loading standard modules into the Aristotle environment 
@@ -116,7 +122,7 @@ In order to make life easier, load the following initial default modules by the 
 
 inside your terminal (the one you ssh-ed into above) 
 
-Then run the command below:
+And when you run the command below
 
 ```module list ```
 
@@ -137,8 +143,5 @@ Currently Loaded Modulefiles:
  11) nano/2.4.2                    22) default-modules/2018
 ```
 
-# Other useful information 
-
-a quick search on youtube can return many useful demonstrations of using the terminal and the bash shell. 
-
-more coming soon.. 
+# Setting up and running Lammps on Aristotle 
+See the file `aristotle_lammps_howto.md` in this repo.
