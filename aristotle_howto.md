@@ -116,11 +116,7 @@ In order to make life easier, load the following initial default modules by the 
 
 inside your terminal (the one you ssh-ed into above) 
 
-You could also add the above line into you `.bashrc` file which is found in your home folder (see below how to do this) so it is loaded on startup (actually at login).
-
-```nano ~/.bashrc```
-
-with this command loaded, running the command (in the terminal)
+Then run the command below:
 
 ```module list ```
 
