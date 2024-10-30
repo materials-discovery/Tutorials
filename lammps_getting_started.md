@@ -1,5 +1,3 @@
-
-
 # LAMMPS on Aristotle@UCL
 
 # Introduction 
@@ -95,6 +93,8 @@ Inside a terminal (on Aristotle)  (don't forget to press Enter at the end of eac
 
 * `cd ` + Enter, to got the home folder, we will clone to the home folder, but you can of course clone to any other folder of your choice.  
 * `git clone  https://github.com/lammps/lammps.git` 
+
+**Note: If you can't use `git clone ssh` in Aristotle, please see the file `ssh.md` in this repository**
   
 Now you should have a folder named `lammps` in your home folder. This is the entire lammps source code. 
 
@@ -149,7 +149,7 @@ To check if a job is still running use the `jobs` and the `ps` (process command)
 [1]-  Running                 lmp_aristotle -in in.melt > out.melt &
 [2]+  Running                 lmp_aristotle -in in2.melt > out2.melt & 
 ``` 
-Note: you can run multiple jobs, as above. 
+**Note: you can run multiple jobs, as above. **
 
 to bring one of the jobs back to the foreground, type
 
@@ -200,4 +200,71 @@ Once you establish an ssh connection to Aristotle using putty+Exceed on windows 
 
 so now we can run gnuplot directly on Aristotle.
 
-# Visualisation
+
+# Visualization Tools for use with LAMMPS
+
+
+LAMMPS can produce on-the-fly JPG or PNG snapshot images via its `dump` image command. However for high-quality, interactive visualization, you need tools below, We will focus on [VMD](https://www.ks.uiuc.edu/Research/vmd/) in here
+
+-[VMD](https://www.ks.uiuc.edu/Research/vmd/)\
+-[AtomEye](http://li.mit.edu/Archive/Graphics/A/)\
+-[OVITO](https://www.ovito.org)\
+-[ParaView](https://www.paraview.org)\
+-[PyMol](https://pymol.org)\
+-[Raster3d](http://www.bmsc.washington.edu/raster3d/raster3d.html)\
+-[RasMol](http://www.openrasmol.org)
+
+## Using Visual Molecular Dynamics (VMD) to Visualize
+VMD is a molecular visualization program for displaying, animating, and analyzing large biomolecular systems using 3-D graphics and built-in scripting.
+
+## How to download it
+To download VMD, follow these steps:
+
+1. Visit the Official Website: Go to the official VMD website at [VMD Download Page](https://www.ks.uiuc.edu/Research/vmd/alpha/).
+2. Create an Account: You may need to create an account or log in if you already have one, as the VMD software is hosted by the University of Illinois and requires user registration.
+3. Choose the Appropriate Version: Select the version compatible with your operating system (Windows, macOS, or Linux). Ensure that your system meets the requirements listed for each version.
+4. Download the Installation File: After selecting the appropriate version, download the installation file to your computer.
+5. Install the Software: Follow the installation instructions provided on the website or within the download package. 
+
+<img src="./figures/VMD.png" alt="VMD_software" width="300" height="auto">
+
+## Visualization
+
+1. Copy `dump.melt` file in your aristotle system to your own machine using the command below
+
+`scp -r <PATH-TO-WINDOWS-FILE> <ucl-user>@aristotle.rc.ucl.ac.uk:/path/to/where/you/want/the/file`
+
+where `<PATH-TO-WINDOWS-FILE> ` should be replaced with the current windows path (can be copied from the path in file-explorer) and `<ucl-user>` should be replaced by your ucl user name. 
+
+
+**Note on unix the folder separator is a forward slash (`/`) unlike in windows which is a backslash (`\`)** 
+
+2. Open the VMD and load the file in the window below
+<img src="./figures/vmd0.png" alt="VMD_software" width="500" height="auto">
+
+In VMD, follow these steps:
+
+- Go to `File > New Molecule > Browse···`.
+- Find and select your file in your local space.
+- Choose `LAMMPS Trajectory` as the file type.
+- Press `Load` to display the structure.
+
+<img src="./figures/vmd1.png" alt="VMD_software" width="300" height="auto">
+
+** it looks messy **
+
+3. Adjust the Display Style
+
+You can go to `Graphics > Representations...` in VMD, and try different display styles:
+
+- Drawing Method: Select `VDW`, then adjust `Sphere Scale` and `Sphere Resolution` to make the atoms clearer and reduce overlap.
+- Coloring Method: Choose from various color schemes.
+
+4. Select some of Atoms
+
+You can focus on a subset of atoms to observe the structure more clearly:
+
+- In the `Graphics > Representations > Selected Atoms, and enter specific selection criteria, such as:
+    - `x < 5 && y < 5 && z < 5`: Only show atoms within the box where x, y, and z are less than 5 units.
+    - `within 5 of index 0`: Show atoms within 5 units of the first atom.
+
