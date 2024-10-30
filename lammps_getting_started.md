@@ -199,3 +199,5 @@ for mac run XQuartz and simply open a terminal and run `ssh -X aritotle.rc.ucl.a
 Once you establish an ssh connection to Aristotle using putty+Exceed on windows or terminal + XQuartz on MAC with the X forwarding option (-X on mac, and check the above putty + xceed page for windows) you will be able to run graphical programs remotely. see (UCL Research Computing Documentation)[https://www.rc.ucl.ac.uk/docs/howto/]
 
 so now we can run gnuplot directly on Aristotle.
+
+# Visualisation
