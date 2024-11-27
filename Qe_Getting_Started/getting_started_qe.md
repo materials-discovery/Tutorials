@@ -6,7 +6,7 @@ This is a getting started tutorial/howto for setting up and running quantum Espr
 ## What is QE
 * Quantum ESPRESSO official website:  [https://www.quantum-espresso.org](https://www.quantum-espresso.org). 
 
-![https://www.quantum-espresso.org](~/figures/quantum_ogo_ok.png)
+![https://www.quantum-espresso.org](/figures/quantum_ogo_ok.png)
 
 > Quantum ESPRESSO is an integrated suite of Open-Source computer codes for electronic-structure calculations and materials modeling at the nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials.
 
@@ -65,6 +65,9 @@ pw.x < si.scf.in > si.scf.out
 # Congrutulations, we finish your first DFT calculation. 
 
 # Dig into the input, and output file
-
+Input file
+![input file](/figures/input.jpeg)
+Output File
+![output file](/figures/output.png)
 # Run Your own Script
 You can find more examples on Quantum ESPRESSO  official [github repository](https://github.com/QEF/q-e/tree/develop/PW/examples). And please make sure you have the 
