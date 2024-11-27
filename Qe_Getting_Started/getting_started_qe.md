@@ -62,12 +62,10 @@ Run a stand alone QE input file do the following (see also lammps getting starte
 ```
 pw.x < si.scf.in > si.scf.out
 ```
-# Congrutulations, we finish your first DFT calculation. 
+# Congrutulations, you finish your first DFT calculation. 
 
 # Dig into the input, and output file
-Input file
 ![input file](/figures/input.jpeg)
-Output File
 ![output file](/figures/output.png)
 # Run Your own Script
 You can find more examples on Quantum ESPRESSO  official [github repository](https://github.com/QEF/q-e/tree/develop/PW/examples). And please make sure you have the 
