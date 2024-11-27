@@ -1,0 +1,64 @@
+# self-consistent calculation
+cat > si.scf.in << EOF
+ &control
+    calculation='scf'
+    restart_mode='from_scratch',
+    prefix='si'
+    pseudo_dir = '/home/jovyan/qe_example',
+    outdir='$TMP_DIR/'
+ /
+ &system
+    ibrav= 2, celldm(1)= 10.2, nat= 2, ntyp= 1,
+    ecutwfc =18.0
+ /
+ &electrons
+    conv_thr =  1.0d-8
+    mixing_beta = 0.7
+ /
+ATOMIC_SPECIES
+ Si  28.086  Si.pbe-n-rrkjus_psl.1.0.0.UPF
+ATOMIC_POSITIONS alat
+ Si 0.00 0.00 0.00
+ Si 0.25 0.25 0.25
+K_POINTS
+  10
+   0.1250000  0.1250000  0.1250000   1.00
+   0.1250000  0.1250000  0.3750000   3.00
+   0.1250000  0.1250000  0.6250000   3.00
+   0.1250000  0.1250000  0.8750000   3.00
+   0.1250000  0.3750000  0.3750000   3.00
+   0.1250000  0.3750000  0.6250000   6.00
+   0.1250000  0.3750000  0.8750000   6.00
+   0.1250000  0.6250000  0.6250000   3.00
+   0.3750000  0.3750000  0.3750000   1.00
+   0.3750000  0.3750000  0.6250000   3.00
+EOF
+$ECHO "  running the scf calculation...\c"
+$PW_COMMAND < si.scf.in > si.scf.out
+check_failure $?
+$ECHO " done"
+
+# post-processing for charge density
+cat > si.pp_rho.in << EOF
+ &inputpp
+    prefix  = 'si'
+    outdir = '$TMP_DIR/'
+    filplot = 'sicharge'
+    plot_num= 0
+ /
+ &plot
+    nfile = 1
+    filepp(1) = 'sicharge'
+    weight(1) = 1.0
+    iflag = 2
+    output_format = 2
+    fileout = 'si.rho.dat'
+    e1(1) =1.0, e1(2)=1.0, e1(3) = 0.0,
+    e2(1) =0.0, e2(2)=0.0, e2(3) = 1.0,
+    nx=56, ny=40
+ /
+EOF
+$ECHO "  running pp.x to do a 2-d plot of the charge density...\c"
+$PP_COMMAND < si.pp_rho.in > si.pp_rho.out
+check_failure $?
+$ECHO " done"
