@@ -1,9 +1,8 @@
 # self-consistent calculation
-    cat > al.scf.$diago.in << EOF
  &control
     calculation='scf'
     restart_mode='from_scratch',
-    pseudo_dir = '$PSEUDO_DIR/',
+    pseudo_dir = '/home/jovyan/Tutorials/Qe_Getting_Started',
     outdir='$TMP_DIR/',
     prefix='al'
     tprnfor = .true.
@@ -14,11 +13,11 @@
     occupations='smearing', smearing='marzari-vanderbilt', degauss=0.05
  /
  &electrons
-    diagonalization='$diago'
+    diagonalization='david'
     mixing_beta = 0.7
  /
 ATOMIC_SPECIES
- Al  26.98 Al.pz-vbc.UPF
+ Al  26.98 Al.pbe-n-kjpaw_psl.1.0.0.UPF
 ATOMIC_POSITIONS alat
  Al 0.00 0.00 0.00
 K_POINTS
@@ -83,8 +82,3 @@ K_POINTS
    0.3125000  0.5625000  0.5625000   3.00
    0.4375000  0.4375000  0.4375000   1.00
    0.4375000  0.4375000  0.5625000   3.00
-EOF
-    $ECHO "  running the scf calculation for Al...\c"
-    $PW_COMMAND < al.scf.$diago.in > al.scf.$diago.out
-    check_failure $?
-    $ECHO " done"
