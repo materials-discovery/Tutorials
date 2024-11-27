@@ -68,4 +68,4 @@ pw.x < si.scf.in > si.scf.out
 ![input file](/figures/input.jpeg)
 ![output file](/figures/output.png)
 # Run Your own Script
-You can find more examples on Quantum ESPRESSO  official [github repository](https://github.com/QEF/q-e/tree/develop/PW/examples). And please make sure you have the 
+You can find more examples on Quantum ESPRESSO  official [github repository](https://github.com/QEF/q-e/tree/develop/PW/examples). And please make sure you have the right pseudopotential path and filename in the input file.
