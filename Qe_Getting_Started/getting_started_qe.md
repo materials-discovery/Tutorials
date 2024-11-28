@@ -28,7 +28,7 @@ Quantum espresso provides a way to generate input file, you can view it on [Quan
 In order to follow the tutorials here you should first read the `terminal-tutorial.md` in this repo and get aquatinted with using the terminal and linux shell. 
 
 # Check Quantum Espresso available on Materials discovery
-Type in the command line the following for the plane wave pseudo potential code:
+Type in the command line the following:
 
 ```shell
 which pw.x 
