@@ -12,10 +12,14 @@ This is a getting started tutorial/howto for setting up and running quantum Espr
 
 
 
-## Where can I find more information about QE
+# Where can I find more information about QE
 The best source of information is the [Quantum ESPRESSO home page](https://www.quantum-espresso.org/) and the [documentation](https://www.quantum-espresso.org/documentation/). Quantum ESPRESSO is also found on the official [github repository](https://github.com/QEF/q-e).
 
 Also see the official documentation and tutorials page: [https://www.quantum-espresso.org/tutorials/](https://www.quantum-espresso.org/tutorials/)
+
+## How to generate a structure.
+
+Quantum espresso provides a way to generate strctures, you can view it on [Quantum ESPRESSO input generator and structure visualizer](https://qeinputgenerator.materialscloud.io). Also, you can use [ASE](https://wiki.fysik.dtu.dk/ase/index.html) to generate it. 
 
 ## Prerequisite 
 In order to follow the tutorials here you should first read the `terminal-tutorial.md` in this repo and get aquatinted with using the terminal and linux shell. 
