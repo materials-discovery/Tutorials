@@ -20,7 +20,7 @@ Also see the official documentation and tutorials page: [https://www.quantum-esp
 ## How to generate a input file.
 
 Quantum espresso provides a way to generate input file, you can view it on [Quantum ESPRESSO input generator and structure visualizer](https://qeinputgenerator.materialscloud.io). Upload your stucture and generate a input file. Or you can pick a example like below.
-![Quantum ESPRESSO input generator and structure visualizer](/figures/QuantumESPRESSO input_generator_and_structure_visualizer.png)
+![Quantum ESPRESSO input generator](/figures/QuantumESPRESSO_input_generator_and_structure_visualizer.png)
 
 
 
