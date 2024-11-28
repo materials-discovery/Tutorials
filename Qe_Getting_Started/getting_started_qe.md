@@ -17,9 +17,12 @@ The best source of information is the [Quantum ESPRESSO home page](https://www.q
 
 Also see the official documentation and tutorials page: [https://www.quantum-espresso.org/tutorials/](https://www.quantum-espresso.org/tutorials/)
 
-## How to generate a structure.
+## How to generate a input file.
 
-Quantum espresso provides a way to generate strctures, you can view it on [Quantum ESPRESSO input generator and structure visualizer](https://qeinputgenerator.materialscloud.io). Also, you can use [ASE](https://wiki.fysik.dtu.dk/ase/index.html) to generate it. 
+Quantum espresso provides a way to generate input file, you can view it on [Quantum ESPRESSO input generator and structure visualizer](https://qeinputgenerator.materialscloud.io). Upload your stucture and generate a input file. Or you can pick a example like below.
+![Quantum ESPRESSO input generator and structure visualizer](/figures/QuantumESPRESSO input_generator_and_structure_visualizer.png)
+
+
 
 ## Prerequisite 
 In order to follow the tutorials here you should first read the `terminal-tutorial.md` in this repo and get aquatinted with using the terminal and linux shell. 
